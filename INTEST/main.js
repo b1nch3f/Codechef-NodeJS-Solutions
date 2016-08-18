@@ -15,9 +15,13 @@
 	    input_stdin_array = input_stdin.split("\n");
 	    main();    
 	});
-	// reads a line from the standard input array
-	function readLine() {
-	    return input_stdin_array[input_currentline++];
+	
+	function main() {
+		var n_k = readLine().split(' ');
+		var a = parseInt(n_k[0]);
+		var b = parseInt(n_k[1]);
+	  	var res = solution(a, b);
+	  	console.log(res);
 	}
 
 	function solution(a, b) {
@@ -32,11 +36,8 @@
 	  return res;  
 	}
 
-	function main() {
-		var n_k = readLine().split(' ');
-		var a = parseInt(n_k[0]);
-		var b = parseInt(n_k[1]);
-	  	var res = solution(a, b);
-	  	console.log(res);
+	// reads a line from the standard input array
+	function readLine() {
+	    return input_stdin_array[input_currentline++];
 	}
 })();
